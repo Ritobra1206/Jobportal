@@ -30,6 +30,7 @@ function Home() {
     };
 
     return (
+        //this is the home page
         <div className="jobs-container">
             <h1>All Jobs</h1>
             <div className="jobs-grid">
