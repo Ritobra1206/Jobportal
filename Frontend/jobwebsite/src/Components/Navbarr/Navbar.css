@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.headerbar {
+    display: none;
+    right: -100%; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(208, 205, 202);
+    transition: right 0.5s;
+    flex-direction: column;
+}
+
+.headerbar.visible {
+    display: flex;
+    right: 0;
+}
+
+.searchicon {
+    display: block;
+}
+
+.logo {
+    width: 50px;
+}
+
+.icons {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 7vw;
+    background-color: rgb(222, 219, 217);
+    border-bottom: 2px solid rgb(227, 201, 172);
+    box-shadow: 0 2px 20px rgb(253, 124, 124);
+}
+
+.list:hover {
+    color: rgb(253, 57, 8);
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.contents ul li {
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-section {
+    flex: 0.1;
+}
+
+.search-section ul {
+    display: flex;
+    justify-content: end;
+}
+
+.search-section ul li {
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+.bars i:hover {
+    color: rgb(253, 57, 8);
+}
+
+.searchbar {
+    display: none;
+    width: 200px;
+    justify-content: center;
+}
+
+.searchbar.visible {
+    display: flex;
+}
+
+.searchbar input {
+    width: 200px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+.srchicon {
+    background-color: rgb(255, 210, 210);
+    display: block;
+    padding: 4px 5px;
+    cursor: pointer;
+}
+
+.sign {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sign-box {
+    transition: all 0.4s;
+    background-color: white;
+    max-width: 500px;
+    width: 500px;
+    border-radius: 20px;
+    padding: 35px;
+    transform: scale(0);
+}
+
+.sign-box h3 {
+    text-align: center;
+    font-size: 28px;
+    color: rgb(255, 72, 0);
+    padding-bottom: 20px;
+}
+
+.sign-box form input {
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+}
+
+.sign-box .signin form input {
+    margin-bottom: 20px;
+}
+
+.sign-box .signin form input:last-of-type {
+    margin-top: 20px;
+}
+
+.sign-box form input:last-of-type {
+    background-color: rgb(253, 128, 78);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    line-height: 30px;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.sign-box form input:last-of-type:hover {
+    background-color: rgb(253, 99, 38);
+}
+
+.sign-box form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(46, 46, 46);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sign-box p {
+    font-size: 13px;
+    color: rgb(252, 30, 30);
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sign-box p:hover {
+    text-decoration: underline;
+}
+
+.sign .bar {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sign-box.scaled {
+    transform: scale(1);
+}
+
+.sign.visible {
+    display: flex;
+}
+
+.signin {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar .contents,
+    .navbar .search-section {
+        display: none;
+    }
+
+    .searchbar {
+        width: 60vw;
+    }
+
+    .icons {
+        display: block;
+        cursor: pointer;
+    }
+
+    .headerbar {
+        overflow: hidden;
+        transition: right 0.5s;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        bottom: 0;
+        right: -100%;
+        background-color: rgb(252, 231, 216);
+    }
+
+    .headerbar.visible {
+        right: 0;
+    }
+
+    .headerbar .search-section, .headerbar .contents {
+        display: block;
+        font-size: 18px;
+    }
+
+    .icons .fa-xmark {
+        display: none;
+        cursor: pointer;
+        top: 20px;
+        right: 5vw;
+        position: absolute;
+        font-size: 25px;
+    }
+
+    .headerbar .contents ul {
+        flex-direction: column;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .headerbar .contents li {
+        width: 96vw;
+        margin: 10px 0;
+        padding: 15px 30px;
+        box-shadow: 0 2px 15px rgb(253, 193, 169);
+        font-size: 15px;
+        margin-top: 5px;
+        transition: all 0.7s;
+    }
+
+    .headerbar .search-section {
+        line-height: 40px;
+        margin-top: 60px;
+        background-color: rgb(252, 210, 182);
+        padding: 15px;
+    }
+
+    .headerbar .search-section ul {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .headerbar .contents li {
+        width: 96vw;
+    }
+
+    .headerbar {
+        width: 100%;
+        right: -100%;
+    }
+}

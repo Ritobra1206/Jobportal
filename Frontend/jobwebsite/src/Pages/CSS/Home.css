@@ -1,0 +1,48 @@
+/* Home.css */
+
+.jobs-container {
+    margin: 20px;
+    text-align: center; 
+  }
+  
+  .jobs-container h1 {
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .job-box {
+    background-color: rgb(240, 237, 234);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-box h2 {
+    margin-top: 0;
+  }
+  
+  .job-box p {
+    margin: 10px 0;
+  }
+  
+  .job-box button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .job-box button:hover {
+    background-color: #45a049;
+  }
+  
