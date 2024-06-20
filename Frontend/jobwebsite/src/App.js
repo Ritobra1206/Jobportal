@@ -18,6 +18,7 @@ function App() {
   return (
     <>
     <JobIdProvider>
+    //this is app.js
       <Navbarr/>
       <Routes>
         <Route path='/' element={<Home/>}/>
